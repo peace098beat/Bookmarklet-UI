@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+					<!-- ソーシャルボタン(Vertical) -->
+<div class="sns-area">
+     
+<div class="sns-share">
+<a class="sns-link opensub" id="twitter" href="http://twitter.com/intent/tweet?text=%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88CSS%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E6%89%8B%E9%A0%86%E3%81%BE%E3%81%A8%E3%82%81&amp;https%3A%2F%2Fcreive.me%2Farchives%2F10438%2F&amp;url=https%3A%2F%2Fcreive.me%2Farchives%2F10438%2F" target="_blank" title="Twitterで共有">
+<i class="fa fa-twitter"></i><!--Twitter  --></a>
+</div>
+     
+<div class="sns-share">
+<a class="sns-link opensub" id="facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fcreive.me%2Farchives%2F10438%2F&amp;t=%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88CSS%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E6%89%8B%E9%A0%86%E3%81%BE%E3%81%A8%E3%82%81" target="_blank" title="Facebookで共有">
+<i class="fa fa-facebook"></i><!-- facebook --></a>
+</div>
+     
+<div class="sns-share visible-769">
+<a class="sns-link opensub" id="line" href="http://line.me/R/msg/text/?初心者向けリセットCSSを自作する手順まとめ%0D%0Ahttps://creive.me/archives/10438/">
+<strong>L</strong><!-- LINE  Font Awesome　不使用--></a>
+</div>
+     
+<div class="sns-share">
+<a class="sns-link opensub" id="hatena" href="http://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fcreive.me%2Farchives%2F10438%2F&amp;title=%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88CSS%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E6%89%8B%E9%A0%86%E3%81%BE%E3%81%A8%E3%82%81" target="_blank" data-hatena-bookmark-title="https://creive.me/archives/10438/" title="このエントリーをはてなブックマークに追加">
+<strong>B!</strong><!-- はてなブックマーク Font Awesome　不使用--></a>
+</div>
+     
+<div class="sns-share">
+<a class="sns-link opensub" id="pocket"  href="http://getpocket.com/edit?url=https%3A%2F%2Fcreive.me%2Farchives%2F10438%2F" target="_blank" title="pocketで共有">
+<i class="fa fa-get-pocket"></i><!-- pocket --></a>
+</div>
+ 
+</div>					<p class="eyecatch">
+					<img width="728" height="430" src="//creive.me/wp-content/uploads/2016/04/reset-728x430.jpg" class="attachment-eye size-eye wp-post-image" alt="reset" />					<p>スタイルシートに記述したコードを読み込ませる前にブラウザがデフォルトで持つCSSをリセットする用途でリセットCSSは用いられています。</p>
+<p>今回はリセットCSSの基本的なことから自作する手順まで説明します。リセットCSSでリセットされているセレクタが「なぜ・どのように」リセットあるいは再定義されているか知ることによって、スタイルシートの理解をより深めてみましょう。</p>
+<div id="toc_container" class="toc_white no_bullets"><p class="toc_title">目次</p><ul class="toc_list"><li><a href="#CSS"><span class="toc_number toc_depth_1">1</span> リセットCSSとは</a><ul><li><a href="#CSS-2"><span class="toc_number toc_depth_2">1.1</span> リセットCSSが必要になる理由</a></li><li><a href="#CSS-3"><span class="toc_number toc_depth_2">1.2</span> リセットCSSを使用する際の問題点</a></li></ul></li><li><a href="#CSS-4"><span class="toc_number toc_depth_1">2</span> 代表的なリセットCSS</a></li><li><a href="#CSS-5"><span class="toc_number toc_depth_1">3</span> リセットCSSの自作手順</a><ul><li><a href="#marginpaddingborder"><span class="toc_number toc_depth_2">3.1</span> margin、padding、borderのリセット</a></li><li><a href="#i"><span class="toc_number toc_depth_2">3.2</span> 文字のスタイルをそろえる</a></li><li><a href="#i-2"><span class="toc_number toc_depth_2">3.3</span> 行の高さを揃える</a></li><li><a href="#box-sizing"><span class="toc_number toc_depth_2">3.4</span> box-sizingを指定する</a></li><li><a href="#i-3"><span class="toc_number toc_depth_2">3.5</span> 不要な記述を削除する</a></li><li><a href="#CSS-6"><span class="toc_number toc_depth_2">3.6</span> リセットCSSを圧縮する</a></li></ul></li><li><a href="#i-4"><span class="toc_number toc_depth_1">4</span> サンプル</a></li><li><a href="#i-5"><span class="toc_number toc_depth_1">5</span> 最後に</a></li></ul></div>
+<h2><span id="CSS">リセットCSSとは</span></h2>
+<p>リセットCSSとは、冒頭でも述べたとおり各ブラウザがデフォルトで持つCSSをリセットするために用いるCSSのことです。</p>
+<h3><span id="CSS-2">リセットCSSが必要になる理由</span></h3>
+<p>なぜリセットCSSが必要になるかというと、ユーザーがChrome・FireFox・IEといったブラウザのどれを使ってもこちらが意図した表示を提供するためです。「リセットCSSを使うと制作が楽になるから」という理由ももちろんありますが、ブラウザ配慮はユーザー配慮であることを認識しておきましょう。</p>
+<h3><span id="CSS-3">リセットCSSを使用する際の問題点</span></h3>
+<p>もちろんリセットCSSを使用すると問題も生じます。例えば次の3つの問題です。</p>
+<ul>
+<li>未使用時に比べてCSSの記述量が多くなる</li>
+<li>表示に無関係の無駄な記述が含まれてしまう</li>
+<li>ブラウザのデフォルトのCSSを有効活用できない</li>
+</ul>
+<p>リセットCSSの記述分だけファイル容量は多くなってしまいます。同じ表示を実現するためにスタイルシートに記述する量がリセットCSS使用時の方が多くなってしまうと見積もれるならばリセットCSSを本当に使用すべきなのかもう一度考え直しましょう。</p>
+<p>また、<a href="http://necolas.github.io/normalize.css/" target="_blank">nomalize.css</a>のように広く使用されることを念頭に入れて設計されたリセットCSSには、制作しているプロダクトの表示には無関係の記述が含まれがちです。より完成度の高いプロダクトをつくるためには、リセットCSSに無駄な記述がないかチェックして必要に応じてその記述を削除しておくことも考えなければなりません。</p>
+<p>さらに、input要素やselect要素のように各ブラウザのデフォルトの装飾がある程度完成されていることもあります。各ブラウザのデフォルトの装飾を活かせるなら活かす選択もときには必要です。</p>
+<h2><span id="CSS-4">代表的なリセットCSS</span><
+	<script type="text/javascript" src="main1.js"></script>
+
+</body>
+</html>
